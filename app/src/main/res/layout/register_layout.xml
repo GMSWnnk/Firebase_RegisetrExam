@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/register_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textRegister"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_top"
+                android:gravity="center"
+                android:text="회원가입"
+                android:textSize="100px"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints"/>
+
+
+            <LinearLayout
+                android:id="@+id/register_form"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_title"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/id_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아이디"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.098"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="118dp" />
+
+                <EditText
+                    android:id="@+id/register_id"
+                    android:layout_width="320dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/border_input"
+                    android:hint="5~16자의 영어 또는 숫자"
+                    android:inputType="text"
+                    android:maxLength="16"
+                    app:layout_constraintEnd_toEndOf="@+id/id_text"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/id_text"
+                    app:layout_constraintTop_toBottomOf="@+id/id_text"
+                    />
+
+                <Button
+                    android:id="@+id/register_id_ck_btn"
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/write_btn"
+                    android:text="중복확인"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/pw_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="비밀번호"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/register_id"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/register_id"
+                    app:layout_constraintTop_toBottomOf="@+id/register_id"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/register_password"
+                    android:layout_width="320dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/border_input"
+                    android:hint="8~16자의 영어 또는 숫자"
+                    android:inputType="textPassword"
+                    android:maxLength="16"
+                    app:layout_constraintEnd_toEndOf="@+id/pw_text"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/pw_text"
+                    app:layout_constraintTop_toBottomOf="@+id/pw_text" />
+
+                <TextView
+                    android:id="@+id/re_pw_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="비밀번호 확인"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/register_password"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/register_password"
+                    app:layout_constraintTop_toBottomOf="@+id/register_password"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/register_re_password"
+                    android:layout_width="320dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/border_input"
+                    android:inputType="textPassword"
+                    android:maxLength="16"
+                    app:layout_constraintEnd_toEndOf="@+id/re_pw_text"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/re_pw_text"
+                    app:layout_constraintTop_toBottomOf="@+id/re_pw_text" />
+
+                <TextView
+                    android:id="@+id/nickname_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="닉네임"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/register_re_password"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/register_re_password"
+                    app:layout_constraintTop_toBottomOf="@+id/register_re_password"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/register_nickname"
+                    android:layout_width="320dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/border_input"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="@+id/nickname_text"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/nickname_text"
+                    app:layout_constraintTop_toBottomOf="@+id/nickname_text" />
+
+                <Button
+                android:id="@+id/register_nickname_ck_btn"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/write_btn"
+                android:text="중복확인"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/register_nickname"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/register_nickname"
+                app:layout_constraintTop_toBottomOf="@+id/register_nickname" />
+
+                <TextView
+                    android:id="@+id/name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="이름"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/register_nickname_ck_btn"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/register_nickname_ck_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/register_nickname_ck_btn"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/register_name"
+                    android:layout_width="320dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/border_input"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="@+id/name_text"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/name_text"
+                    app:layout_constraintTop_toBottomOf="@+id/name_text"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/phone_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="핸드폰 번호"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/register_name"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/register_name"
+                    app:layout_constraintTop_toBottomOf="@+id/register_name"
+                    tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                    android:id="@+id/phone_layout"
+                    android:layout_width="320dp"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@+id/name_text"
+                    app:layout_constraintStart_toStartOf="@+id/name_text"
+                    app:layout_constraintTop_toBottomOf="@+id/name_text">
+
+                    <EditText
+                        android:id="@+id/register_phonenum_start"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:background="@drawable/border_input"
+                        android:inputType="number"
+                        android:orientation="horizontal"
+                        android:maxLength="5"/>
+
+                    <TextView
+                        android:id="@+id/hyphen1"
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:text="-"
+                        android:textSize="50dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/register_phonenum_middle"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:background="@drawable/border_input"
+                        android:inputType="number"
+                        android:orientation="horizontal"
+                        android:maxLength="5"/>
+
+                    <TextView
+                        android:id="@+id/hyphen2"
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:text="-"
+                        android:textSize="50dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/register_phonenum_end"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:background="@drawable/border_input"
+                        android:inputType="number"
+                        android:orientation="horizontal"
+                        android:maxLength="5"/>
+            </LinearLayout> <!--phone number layout-->
+
+            <RelativeLayout
+                    android:id="@+id/sms_certif_layout"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/register_sms_certif"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:background="@drawable/border_input"
+                    android:hint="인증번호"
+                    android:inputType="number"
+                    android:padding="10dp" />
+
+                <Button
+                    android:id="@+id/register_sms_send_btn"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/write_btn"
+                    android:text="인증번호 전송"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+                <Button
+                    android:id="@+id/register_sms_ck_btn"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/write_btn"
+                    android:layout_gravity="right"
+                    android:text="인증번호 확인"
+                    android:textSize="20dp" />
+
+            <TextView
+                    android:id="@+id/email_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="이메일"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/register_certif_ck_btn"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/register_certif_ck_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/register_certif_ck_btn"
+                    tools:ignore="MissingConstraints" />
+
+            <EditText
+                    android:id="@+id/register_email"
+                    android:layout_width="320dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:hint="예)member@lunch.com"
+                    android:background="@drawable/border_input"
+                    android:inputType="textEmailAddress"
+                    app:layout_constraintEnd_toEndOf="@+id/email_text"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/email_text"
+                    app:layout_constraintTop_toBottomOf="@+id/email_text" />
+
+            <RelativeLayout
+                    android:id="@+id/email_certif_layout"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/email_certif_num"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:background="@drawable/border_input"
+                        android:hint="인증번호"
+                        android:inputType="number"
+                        android:padding="10dp" />
+
+                    <Button
+                        android:id="@+id/register_email_send_btn"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/write_btn"
+                        android:text="인증번호 전송"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/register_email_ck_btn"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/write_btn"
+                    android:layout_gravity="right"
+                    android:text="인증번호 확인"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/btn_register_submit"
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/submit_btn"
+                    android:layout_gravity="center"
+                    android:text="회원가입"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="@+id/register_email_ck_btn"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/register_email_ck_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/register_email_ck_btn"
+                    tools:ignore="MissingConstraints"
+
+                    android:layout_marginBottom="30dp"/>
+
+                <!--            <ProgressBar-->
+                <!--                android:id="@+id/join_progress"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_gravity="center"-->
+                <!--                android:visibility="gone"-->
+                <!--                tools:ignore="MissingConstraints" />-->
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
